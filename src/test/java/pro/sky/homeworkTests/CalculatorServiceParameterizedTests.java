@@ -13,7 +13,7 @@ public class CalculatorServiceParameterizedTests {
     @ParameterizedTest
     @MethodSource("paramsForAdditionTest")
     public void additionTest(int x, int y, int result) {
-        assertEquals(result, out.add(x, y));
+        assertEquals(result, out.plus(x, y));
     }
 
     public static Stream<Arguments> paramsForAdditionTest() {
@@ -27,7 +27,7 @@ public class CalculatorServiceParameterizedTests {
     @ParameterizedTest
     @MethodSource("paramsForSubtractionTest")
     public void subtractionTest(int x, int y, int result) {
-        assertEquals(result, out.sub(x, y));
+        assertEquals(result, out.minus(x, y));
     }
 
     public static Stream<Arguments> paramsForSubtractionTest() {
@@ -66,4 +66,4 @@ public class CalculatorServiceParameterizedTests {
         );
     }
 }
-}
+
