@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RestController;
 import pro.sky.homeworkTests.services.CalculatorService;
 
 @RestController
-@RequestMapping
+@RequestMapping("/calculator")
 public class CalculatorController {
     private final CalculatorService service;
 
@@ -15,7 +15,7 @@ public class CalculatorController {
         this.service = service;
     }
 
-    @GetMapping("/calculator")
+    @GetMapping()
     public String greeting() {
         return "Добро пожаловать в калькулятор!";
     }

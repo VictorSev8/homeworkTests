@@ -1,7 +1,8 @@
 package pro.sky.homeworkTests.services;
 
+import org.springframework.stereotype.Service;
 import pro.sky.homeworkTests.exceptions.MyIllegalArgumentException;
-
+@Service
 public class CalculatorService {
     public int plus(int a, int b) {
         return a + b;
